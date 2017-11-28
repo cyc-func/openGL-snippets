@@ -89,11 +89,6 @@ class GLRenderer implements GLSurfaceView.Renderer
     Matrix.setIdentityM(mMVPMatrix, 0);
     Matrix.translateM(mMVPMatrix, 0, 0.5f, 0f, 0f);
 
-    for(int i = 0; i < 16; i++)
-    {
-      Log.d("Magdalena", mMVPMatrix[i] + "");
-    }
-
     GLES20.glUniformMatrix4fv(uMVPMatrixLocation, 1, false, mMVPMatrix, 0);
 
     GLES20.glUniform4f(uColorLocation, 1.0f, 1.0f, 1.0f, 1.0f);
